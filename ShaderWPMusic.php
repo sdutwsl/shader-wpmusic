@@ -20,6 +20,7 @@ add_action('wp_footer', 'SWP_add_footer');
 
 function SWP_add_footer()
 {
+    echo get_option('SWP_settings');
     $platform = get_option('SWP_select_field_platform');
     $music_type = get_option('SWP_select_field_music_type');
     $music_id = get_option('SWP_select_field_music_id');
