@@ -27,7 +27,7 @@ function SWP_add_footer()
     echo '<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>';
     echo '<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>';
     echo '<meting-js server="' . $platform . '" type="' . $music_type . '" id="' . $music_id . '" fixed="true"></meting-js>';
-    echo $platform . $music_type . $music_id;
+    // echo $platform . $music_type . $music_id;
 }
 
 function SWP_add_head()
