@@ -68,8 +68,9 @@ function SWP_select_field_platform_render()
     $options = get_option('SWP_settings');
 ?>
     <select name='SWP_settings[SWP_select_field_platform]'>
-        <option value='1' <?php selected($options['SWP_select_field_platform'], 1); ?>>Option 1</option>
-        <option value='2' <?php selected($options['SWP_select_field_platform'], 2); ?>>Option 2</option>
+        <option value='netease' <?php selected($options['SWP_select_field_platform'], 'netease'); ?>>网易云</option>
+        <option value='tencent' <?php selected($options['SWP_select_field_platform'], 'tencent'); ?>>QQ音乐</option>
+        <option value='kugou' <?php selected($options['SWP_select_field_platform'], 'kugou'); ?>>酷狗音乐</option>
     </select>
 
 <?php
