@@ -25,8 +25,8 @@ function SWP_add_footer()
     $music_id = get_option('SWP_select_field_music_id');
     echo '<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>';
     echo '<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>';
-    echo '<meting-js server="netease" type="playlist" id="60198" fixed="true"></meting-js>';
-    echo $platform . $music_type . $music_id;
+    echo '<meting-js server="' . $platform . '" type="' . $music_type . '" id="' . $music_id . '" fixed="true"></meting-js>';
+    // echo $platform . $music_type . $music_id;
 }
 
 function SWP_add_head()
