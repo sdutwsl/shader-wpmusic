@@ -15,7 +15,20 @@ Author URI:
 
 add_action('admin_menu', 'SWP_add_admin_menu');
 add_action('admin_init', 'SWP_settings_init');
+add_action('wp_head', 'SWP_add_head');
+add_action('wp_footer', 'SWP_add_footer');
 
+function SWP_add_footer()
+{
+    echo '<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>';
+    echo '<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>';
+    echo '<meting-js server="netease" type="playlist" id="60198"></meting-js>';
+}
+
+function SWP_add_head()
+{
+    echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">';
+}
 
 function SWP_add_admin_menu()
 {
