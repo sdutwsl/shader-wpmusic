@@ -31,45 +31,45 @@ function SWP_settings_init()
 
     add_settings_section(
         'SWP_pluginPage_section',
-        __('Your section description', 'SWP'),
+        __('设置你的音乐', 'SWP'),
         'SWP_settings_section_callback',
         'pluginPage'
     );
 
     add_settings_field(
-        'SWP_select_field_0',
-        __('Settings field description', 'SWP'),
-        'SWP_select_field_0_render',
+        'SWP_select_field_platform',
+        __('平台', 'SWP'),
+        'SWP_select_field_platform_render',
         'pluginPage',
         'SWP_pluginPage_section'
     );
 
     add_settings_field(
-        'SWP_select_field_1',
-        __('Settings field description', 'SWP'),
-        'SWP_select_field_1_render',
+        'SWP_select_field_music_type',
+        __('音乐类型', 'SWP'),
+        'SWP_select_field_music_type_render',
         'pluginPage',
         'SWP_pluginPage_section'
     );
 
     add_settings_field(
-        'SWP_text_field_2',
-        __('Settings field description', 'SWP'),
-        'SWP_text_field_2_render',
+        'SWP_select_field_music_id',
+        __('音乐ID', 'SWP'),
+        'SWP_select_field_music_id_render',
         'pluginPage',
         'SWP_pluginPage_section'
     );
 }
 
 
-function SWP_select_field_0_render()
+function SWP_select_field_platform_render()
 {
 
     $options = get_option('SWP_settings');
 ?>
-    <select name='SWP_settings[SWP_select_field_0]'>
-        <option value='1' <?php selected($options['SWP_select_field_0'], 1); ?>>Option 1</option>
-        <option value='2' <?php selected($options['SWP_select_field_0'], 2); ?>>Option 2</option>
+    <select name='SWP_settings[SWP_select_field_platform]'>
+        <option value='1' <?php selected($options['SWP_select_field_platform'], 1); ?>>Option 1</option>
+        <option value='2' <?php selected($options['SWP_select_field_platform'], 2); ?>>Option 2</option>
     </select>
 
 <?php
@@ -77,14 +77,14 @@ function SWP_select_field_0_render()
 }
 
 
-function SWP_select_field_1_render()
+function SWP_select_field_music_type_render()
 {
 
     $options = get_option('SWP_settings');
 ?>
-    <select name='SWP_settings[SWP_select_field_1]'>
-        <option value='1' <?php selected($options['SWP_select_field_1'], 1); ?>>Option 1</option>
-        <option value='2' <?php selected($options['SWP_select_field_1'], 2); ?>>Option 2</option>
+    <select name='SWP_settings[SWP_select_field_music_type]'>
+        <option value='1' <?php selected($options['SWP_select_field_music_type'], 1); ?>>Option 1</option>
+        <option value='2' <?php selected($options['SWP_select_field_music_type'], 2); ?>>Option 2</option>
     </select>
 
 <?php
@@ -92,12 +92,12 @@ function SWP_select_field_1_render()
 }
 
 
-function SWP_text_field_2_render()
+function SWP_select_field_music_id_render()
 {
 
     $options = get_option('SWP_settings');
 ?>
-    <input type='text' name='SWP_settings[SWP_text_field_2]' value='<?php echo $options['SWP_text_field_2']; ?>'>
+    <input type='text' name='SWP_settings[SWP_select_field_music_id]' value='<?php echo $options['SWP_select_field_music_id']; ?>'>
 <?php
 
 }
