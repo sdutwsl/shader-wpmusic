@@ -6,11 +6,11 @@
  */
 /*
 Plugin Name: Shader WP Music
-Plugin URI: 
-Description: 
+Plugin URI: https://github.com/sdutwsl/shader-wpmusic
+Description: a simple music play for netease/qq/kugou music
 Author: sdutwsl
 Version: 1.0
-Author URI: 
+Author URI: https://www.sdutwsl.xyz
 */
 
 add_action('admin_menu', 'SWP_add_admin_menu');
