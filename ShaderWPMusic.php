@@ -19,7 +19,7 @@ add_action( 'admin_init', 'SWP_settings_init' );
 
 function SWP_add_admin_menu(  ) { 
 
-	add_submenu_page( 'tools.php', 'ShaderWPMusic', 'ShaderWPMusic', 'manage_options', 'shaderwpmusic', 'SWP_options_page' );
+	add_submenu_page( 'plugins.php', 'ShaderWPMusic', 'ShaderWPMusic', 'manage_options', 'shaderwpmusic', 'SWP_options_page' );
 
 }
 
