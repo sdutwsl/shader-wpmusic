@@ -84,8 +84,9 @@ function SWP_select_field_music_type_render()
     $options = get_option('SWP_settings');
 ?>
     <select name='SWP_settings[SWP_select_field_music_type]'>
-        <option value='1' <?php selected($options['SWP_select_field_music_type'], 1); ?>>Option 1</option>
-        <option value='2' <?php selected($options['SWP_select_field_music_type'], 2); ?>>Option 2</option>
+        <option value='song' <?php selected($options['SWP_select_field_music_type'], 'song'); ?>>歌曲</option>
+        <option value='playlist' <?php selected($options['SWP_select_field_music_type'], 'playlist'); ?>>歌单Playlist</option>
+        <option value='album' <?php selected($options['SWP_select_field_music_type'], 'album'); ?>>专辑Album</option>
     </select>
 
 <?php
@@ -98,7 +99,7 @@ function SWP_select_field_music_id_render()
 
     $options = get_option('SWP_settings');
 ?>
-    <input type='text' name='SWP_settings[SWP_select_field_music_id]' value='<?php echo $options['SWP_select_field_music_id']; ?>'>
+    <input type='text' placeholder='歌单/歌曲/列表 ID' name='SWP_settings[SWP_select_field_music_id]' value='<?php echo $options['SWP_select_field_music_id']; ?>'>
 <?php
 
 }
