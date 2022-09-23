@@ -24,15 +24,25 @@ function SWP_add_footer()
     $platform = $settings['SWP_select_field_platform'];
     $music_type = $settings['SWP_select_field_music_type'];
     $music_id = $settings['SWP_select_field_music_id'];
-    echo '<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>';
-    echo '<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>';
+    echo '
+        <script async>
+            function loadScript(src) {
+                let script = document.createElement("script");
+                script.src = src;
+                script.defer = true;
+                document.body.append(script);
+            }
+            loadScript("https://cdn.sdutwsl.xyz/static/shader_wp_music/APlayer.min.js")
+            loadScript("https://cdn.sdutwsl.xyz/static/shader_wp_music/Meting.min.js")
+        </script>
+    ';
     echo '<meting-js server="' . $platform . '" type="' . $music_type . '" id="' . $music_id . '" fixed="true"></meting-js>';
     // echo $platform . $music_type . $music_id;
 }
 
 function SWP_add_head()
 {
-    echo '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">';
+    echo '<link rel="stylesheet" href="https://cdn.sdutwsl.xyz/static/shader_wp_music/APlayer.min.css">';
 }
 
 function SWP_add_admin_menu()
