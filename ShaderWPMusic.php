@@ -10,7 +10,7 @@ Plugin URI: https://github.com/sdutwsl/shader-wpmusic
 Description: a simple music play for netease/qq/kugou music
 Author: sdutwsl
 Version: 1.0
-Author URI: https://www.sdutwsl.xyz
+Author URI: https://www.sdutwsl.moe
 */
 
 add_action('admin_menu', 'SWP_add_admin_menu');
@@ -32,8 +32,8 @@ function SWP_add_footer()
                 script.defer = true;
                 document.body.append(script);
             }
-            loadScript("https://cdn.sdutwsl.xyz/static/shader_wp_music/APlayer.min.js")
-            loadScript("https://cdn.sdutwsl.xyz/static/shader_wp_music/Meting.min.js")
+            loadScript("https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.js")
+            loadScript("https://cdn.bootcdn.net/ajax/libs/meting/2.0.1/Meting.min.js")
         </script>
     ';
     echo '<meting-js server="' . $platform . '" type="' . $music_type . '" id="' . $music_id . '" fixed="true"></meting-js>';
@@ -42,7 +42,7 @@ function SWP_add_footer()
 
 function SWP_add_head()
 {
-    echo '<link rel="stylesheet" href="https://cdn.sdutwsl.xyz/static/shader_wp_music/APlayer.min.css">';
+    echo '<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.css">';
 }
 
 function SWP_add_admin_menu()
